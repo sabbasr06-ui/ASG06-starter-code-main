@@ -39,3 +39,4 @@ RIGHT = 'right'
 
 # ── Worm indexing ─────────────────────────────────────────────────────────────
 HEAD = 0   # Index 0 in wormCoords is always the head
+##

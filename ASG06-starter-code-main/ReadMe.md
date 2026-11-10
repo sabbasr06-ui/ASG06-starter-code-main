@@ -1,5 +1,5 @@
 ## Objective
-In this project you will complete a fully playable Wormy snake game using Python and the Pygame library. A working skeleton (wormy.py) has already been provided with constants, helper functions, and screen management code. Your job is to implement the 9 core functions that make the game run.
+In the project you will complete a fully playable Wormy snake game using Python and the Pygame library. A working skeleton (wormy.py) has already been provided with constants, helper functions, and screen management code. Your job is to implement the 9 core functions that make the game run.
 
 ### This project reinforces:
 
@@ -198,3 +198,4 @@ Play the game
 
 Run the test suite
 `pytest test_wormy.py -v`
+

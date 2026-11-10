@@ -212,3 +212,4 @@ def getRandomLocation():
         'x': random.randint(0, CELLWIDTH  - 1),
         'y': random.randint(0, CELLHEIGHT - 1),
     }
+##

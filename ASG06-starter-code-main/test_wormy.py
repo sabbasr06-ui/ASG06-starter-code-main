@@ -393,3 +393,5 @@ class TestIntegration:
         if not isOppositeDirection(current_direction, pressed_key_direction):
             current_direction = pressed_key_direction
         assert current_direction == RIGHT   # direction must NOT have changed
+
+        ##
