@@ -91,12 +91,11 @@ def isWallCollision(wormCoords):
         worm = [{'x': 10, 'y': 10}, ...]   ->  False  (safe)
     """
     # TODO: implement this function
-    def isWallCollision(wormCoordss):
-        head = wormCoords[0]
+    head = wormCoords[0]
 
-        if head['x'] < 0 or head['x'] >= CELLWIDTH:
+    if head['x'] < 0 or head['x'] >= CELLWIDTH:
             return True
-        if head['y'] < 0 or head['y'] >= CELLHEIGHT:
+    if head['y'] < 0 or head['y'] >= CELLHEIGHT:
             return True
     return False
 
