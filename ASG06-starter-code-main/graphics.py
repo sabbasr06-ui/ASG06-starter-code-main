@@ -51,7 +51,39 @@ def drawWorm(DISPLAYSURF, wormCoords, direction=RIGHT):
         direction  (str):  Current movement direction (for eye orientation).
     """
     # TODO: implement this function
-    pass
+    for index, coord in enumerate(wormCoords):
+        px = coord['x'] * CELLSIZE
+        py = coord['y'] * CELLSIZE
+
+        if index == HEAD:
+            segment_color = HEADGREEN
+        else:
+            segment_color = GREEN
+
+            outerRect = pygame.Rect(px + 1, py + 1, CELLSIZE - 2, CELLSIZE - 2)
+            pygame.draw.rect(DISPLAYSURF, segment_color, outerRect, border_radius=5)
+
+            if index == HEAD:
+                eyesize = 3
+                if direction == RIGHT:
+                    eye1 = (px +13, py + 6)
+                    eye2 = (px +13, py + 14)
+                elif direction == LEFT:
+                    eye1 = (px + 4, py + 6)
+                    eye2 = (px + 4, py + 14)
+                elif direction == UP:
+                    eye1 = (px + 6, py + 4)
+                    eye2 = (px + 14, py + 4)
+                elif direction == DOWN:
+                    eye1 = (px + 6, py + 13)
+                    eye2 = (px + 14, py + 13)
+
+                    pygame.draw.circle(DISPLAYSURF, WHITE, eye1, eyesize)
+                    pygame.draw.circle(DISPLAYSURF, WHITE, eye2, eyesize)
+
+                    pygame.draw.circle(DISPLAYSURF, BLACK, eye1, 2)
+                    pygame.draw.circle(DISPLAYSURF, BLACK, eye2, 2)
+
 
 
 # ─────────────────────────────────────────────────────────────────────────────
