@@ -170,6 +170,33 @@ def runGame():
     startx = random.randint(5, CELLWIDTH - 6)
     starty = random.randint(5, CELLHEIGHT - 6)
 
+    wormCoords = [
+        {'x': startx, 'y': starty},
+        {'x': startx - 1, 'y': starty},
+        {'x': startx - 2, 'y': starty},
+    ]
+
+    direction = RIGHT
+    apple = getRandomLocation()
+
+    while True:
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                terminate()
+            elif event.type == KEYDOWN:
+                if not isOppositeDirection(direction, LEFT) and (event.key == K_LEFT or event.key == K_a):
+                    direction = LEFT
+                elif not isOppositeDirection(direction, RIGHT) and (event.key == K_RIGHT or event.key == K_d):
+                    direction = RIGHT
+                elif event.key in (K_UP, K_w):
+                    if not isOppositeDirection(direction, UP):
+                        direction = UP
+                    elif event.key in (K_DOWN, K_s):
+                        if not isOppositeDirection(direction, DOWN):
+                                direction = DOWN
+
+                
+
 
 if __name__ == '__main__':
     main()
