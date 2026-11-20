@@ -153,10 +153,10 @@ def hasEatenApple(wormCoords, apple):
         apple = {'x': 11, 'y': 10}   ->  False
     """
     # TODO: implement this function
-    def hasEatenApple(wormCoords, apple):
-        head = wormCoords[0]
+    
+    head = wormCoords[0]
 
-        if head['x'] == apple['x'] and head['y'] == apple['y']:
+    if head['x'] == apple['x'] and head['y'] == apple['y']:
             return True
     return False
 
