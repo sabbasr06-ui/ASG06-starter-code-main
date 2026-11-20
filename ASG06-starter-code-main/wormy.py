@@ -167,7 +167,8 @@ def runGame():
             FPSCLOCK.tick(FPS)
     """
     # TODO: implement this function
-    pass
+    startx = random.randint(5, CELLWIDTH - 6)
+    starty = random.randint(5, CELLHEIGHT - 6)
 
 
 if __name__ == '__main__':
