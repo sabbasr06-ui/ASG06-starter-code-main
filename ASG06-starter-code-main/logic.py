@@ -214,14 +214,14 @@ def isOppositeDirection(current, new):
         isOppositeDirection(RIGHT, RIGHT)  ->  False   (same is NOT opposite)
     """
     # TODO: implement this function
-    def isOppositeDirection(current, new):
-        opposites = {
+    
+    opposites = {
             UP: DOWN,
             DOWN: UP,
             LEFT: RIGHT,
             RIGHT: LEFT,
         }
-        return opposites.get(current) == new
+    return opposites.get(current) == new
 
 
 # ─────────────────────────────────────────────────────────────────────────────
