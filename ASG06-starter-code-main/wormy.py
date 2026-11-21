@@ -183,17 +183,21 @@ def runGame():
         for event in pygame.event.get():
             if event.type == QUIT:
                 terminate()
+            
             elif event.type == KEYDOWN:
                 if not isOppositeDirection(direction, LEFT) and (event.key == K_LEFT or event.key == K_a):
                     direction = LEFT
+               
                 elif not isOppositeDirection(direction, RIGHT) and (event.key == K_RIGHT or event.key == K_d):
                     direction = RIGHT
+               
                 elif event.key in (K_UP, K_w):
                     if not isOppositeDirection(direction, UP):
                         direction = UP
-                    elif event.key in (K_DOWN, K_s):
-                        if not isOppositeDirection(direction, DOWN):
-                                direction = DOWN
+                   
+                elif event.key in (K_DOWN, K_s):
+                    if not isOppositeDirection(direction, DOWN):
+                        direction = DOWN
 
         wormCoords.insert(0, getNewHead(wormCoords, direction))
         if isWallCollision(wormCoords) or isSelfCollision(wormCoords):
