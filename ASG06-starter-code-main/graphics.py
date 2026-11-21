@@ -112,7 +112,18 @@ def drawApple(DISPLAYSURF, coord):
         coord (dict): {'x': int, 'y': int} grid position of the apple.
     """
     # TODO: implement this function
-    pass
+    px = coord['x'] * CELLSIZE
+    py = coord['y'] * CELLSIZE
+
+    center = (px + CELLSIZE // 2, py + CELLSIZE // 2 + 2)
+    pygame.draw.circle(DISPLAYSURF, DARKGREEN, center, 9)
+    pygame.draw.circle(DISPLAYSURF, RED, center, 7)
+
+    leaf_rect = pygame.Rect(px + 6, py + 2, 6, 4)
+    pygame.draw.rect(DISPLAYSURF, LEAF_GREEN, leaf_rect)
+
+    shinePosition = (px + 6, py + 7)
+    pygame.draw.circle(DISPLAYSURF, WHITE, shinePosition, 2)
 
 
 # ─────────────────────────────────────────────────────────────────────────────
